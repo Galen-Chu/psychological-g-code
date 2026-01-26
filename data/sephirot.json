@@ -1,0 +1,412 @@
+{
+  "system": "Kabbalah Tree of Life",
+  "description": "The ten emanations through which the Infinite reveals Itself in Jewish mysticism, arranged on the Tree of Life diagram with connecting paths.",
+  "source_tradition": "Kabbalah / Hermetic Qabalah",
+  "sephirot": [
+    {
+      "id": "keter",
+      "name": "Keter",
+      "hebrew": "כתר",
+      "translation": "Crown",
+      "position": "top center",
+      "number": 1,
+      "world": "Archangelic World (Atziluth)",
+      "god_name": "Eheieh (I Am)",
+      "archangel": "Metatron",
+      "order_of_angels": "Chayoth Ha-Qadesh (Holy Living Creatures)",
+      "color": "White",
+      "planet": "Neptune",
+      "tarot": "The Four Aces",
+      "associations": {
+        "meaning": "Pure consciousness, divine will, unity, the source of all",
+        "psychological": "Transcendence, enlightenment, divine spark",
+        "path_of_return": "Union with Source"
+      },
+      "when_balanced": ["Divine connection", "Self-realization", "Unity consciousness", "Pure awareness"],
+      "when_imbalanced": ["Spiritual delusion", "Disconnection from source", "Ego inflation"]
+    },
+    {
+      "id": "chokhmah",
+      "name": "Chokhmah",
+      "hebrew": "חכמה",
+      "translation": "Wisdom",
+      "position": "top right (from viewer's perspective - pillar of Mercy)",
+      "number": 2,
+      "pillar": "Pillar of Mercy",
+      "world": "Archangelic World (Atziluth)",
+      "god_name": "Jah (Lord)",
+      "archangel": "Ratziel",
+      "order_of_angels": "Auphanim (Wheels)",
+      "color": "Soft blue/gray",
+      "planet": "Uranus / Zodiac",
+      "tarot": "The Four Twos",
+      "associations": {
+        "meaning": "Pure creative force, intuitive wisdom, masculine principle",
+        "psychological": "Intuitive insight, creative spark, potential",
+        "path_of_return": "Illuminating the creative impulse"
+      },
+      "when_balanced": ["Creative vision", "Intuitive wisdom", "Openness to new ideas", "Divine inspiration"],
+      "when_imbalanced": ["Scattered energy", "Impulsiveness", "Lack of follow-through"]
+    },
+    {
+      "id": "binah",
+      "name": "Binah",
+      "hebrew": "בינה",
+      "translation": "Understanding",
+      "position": "top left (pillar of Severity)",
+      "number": 3,
+      "pillar": "Pillar of Severity",
+      "world": "Archangelic World (Atziluth)",
+      "god_name": "Jehovah Elohim",
+      "archangel": "Tzaphkiel",
+      "order_of_angels": "Aralim (Thrones)",
+      "color": "Crimson / Black",
+      "planet": "Saturn",
+      "tarot": "The Four Threes",
+      "associations": {
+        "meaning": "Form, structure, understanding, feminine principle, the Great Mother",
+        "psychological": "Deep understanding, form-giving, containment, synthesis",
+        "path_of_return": "Finding meaning in structure"
+      },
+      "when_balanced": ["Deep understanding", "Wisdom from experience", "Nurturing", "Form and structure"],
+      "when_imbalanced": ["Rigidity", "Over-analysis", "Depression", "Resistance to change"]
+    },
+    {
+      "id": "chesed",
+      "name": "Chesed",
+      "hebrew": "חסד",
+      "translation": "Mercy / Loving-kindness",
+      "position": "middle right (pillar of Mercy)",
+      "number": 4,
+      "pillar": "Pillar of Mercy",
+      "world": "Angelic World (Beriyah)",
+      "god_name": "El",
+      "archangel": "Tzadkiel",
+      "order_of_angels": "Chashmalim (Brilliant Ones)",
+      "color": "Blue",
+      "planet": "Jupiter",
+      "tarot": "The Four Fours",
+      "associations": {
+        "meaning": "Expansion, benevolence, grace, abundance, unconditional love",
+        "psychological": "Generosity, expansion of consciousness, compassion",
+        "path_of_return": "Embracing abundance and grace"
+      },
+      "when_balanced": ["Compassion", "Generosity", "Grace", "Expansion"],
+      "when_imbalanced": ["Over-giving", "Enabling", "Lack of boundaries", "Indulgence"]
+    },
+    {
+      "id": "gevurah",
+      "name": "Gevurah",
+      "hebrew": "גבורה",
+      "translation": "Severity / Strength / Judgment",
+      "position": "middle left (pillar of Severity)",
+      "number": 5,
+      "pillar": "Pillar of Severity",
+      "world": "Angelic World (Beriyah)",
+      "god_name": "Elohim Gibor",
+      "archangel": "Kamael",
+      "order_of_angels": "Seraphim (Fiery Serpents)",
+      "color": "Red",
+      "planet": "Mars",
+      "tarot": "The Four Fives",
+      "associations": {
+        "meaning": "Discipline, judgment, strength, boundaries, justice",
+        "psychological": "Willpower, discernment, setting boundaries, strength of character",
+        "path_of_return": "Balancing power with wisdom"
+      },
+      "when_balanced": ["Strength", "Discipline", "Clear boundaries", "Justice"],
+      "when_imbalanced": ["Cruelty", "Rigidity", "Harsh judgment", "Aggression"]
+    },
+    {
+      "id": "tiferet",
+      "name": "Tiferet",
+      "hebrew": "תפארת",
+      "translation": "Beauty / Harmony",
+      "position": "center (pillar of Balance/Mildness)",
+      "number": 6,
+      "pillar": "Pillar of Balance (Mildness)",
+      "world": "Angelic World (Beriyah)",
+      "god_name": "Jehovah Eloah ve-Daath",
+      "archangel": "Michael",
+      "order_of_angels": "Malachim (Kings)",
+      "color": "Yellow / Gold / Pink",
+      "planet": "Sun",
+      "tarot": "The Four Sixes",
+      "associations": {
+        "meaning": "Beauty, harmony, balance, the heart center, sacrifice, integration",
+        "psychological": "Integration of opposites, harmony, compassion, beauty",
+        "path_of_return": "Finding the balance point"
+      },
+      "when_balanced": ["Harmony", "Balance", "Compassion", "Integration of self"],
+      "when_imbalanced": ["Self-sacrifice to a fault", "Lack of direction", "Being pulled by opposites"]
+    },
+    {
+      "id": "netzach",
+      "name": "Netzach",
+      "hebrew": "נצח",
+      "translation": "Eternity / Victory",
+      "position": "lower right (pillar of Mercy)",
+      "number": 7,
+      "pillar": "Pillar of Mercy",
+      "world": "World of Formation (Yetzirah)",
+      "god_name": "Jehovah Tzabaoth",
+      "archangel": "Haniel",
+      "order_of_angels": "Elohim (Gods)",
+      "color": "Green",
+      "planet": "Venus",
+      "tarot": "The Four Sevens",
+      "associations": {
+        "meaning": "Victory, endurance, creativity, emotions, nature, feelings",
+        "psychological": "Emotional intelligence, creativity, endurance, passion",
+        "path_of_return": "Transmuting emotion into wisdom"
+      },
+      "when_balanced": ["Creative expression", "Emotional flow", "Perseverance", "Connection to nature"],
+      "when_imbalanced": ["Over-emotionality", "Lack of boundaries", "Creative blocks", "Mood swings"]
+    },
+    {
+      "id": "hod",
+      "name": "Hod",
+      "hebrew": "הוד",
+      "translation": "Glory / Splendor",
+      "position": "lower left (pillar of Severity)",
+      "number": 8,
+      "pillar": "Pillar of Severity",
+      "world": "World of Formation (Yetzirah)",
+      "god_name": "Elohim Tzabaoth",
+      "archangel": "Raphael",
+      "order_of_angels": "Benei Elohim (Sons of Gods)",
+      "color": "Orange",
+      "planet": "Mercury",
+      "tarot": "The Four Eights",
+      "associations": {
+        "meaning": "Glory, intellect, communication, ritual, logic, magic",
+        "psychological": "Rational mind, analytical ability, communication, ritual",
+        "path_of_return": "Finding the right use of intellect"
+      },
+      "when_balanced": ["Clear thinking", "Effective communication", "Magical ability", "Analytical skill"],
+      "when_imbalanced": ["Over-intellectualization", "Skepticism", "Ritual without feeling", "Disconnection from emotion"]
+    },
+    {
+      "id": "yesod",
+      "name": "Yesod",
+      "hebrew": "יסוד",
+      "translation": "Foundation",
+      "position": "lower center (pillar of Balance)",
+      "number": 9,
+      "pillar": "Pillar of Balance",
+      "world": "World of Formation (Yetzirah)",
+      "god_name": "Shaddai El Chai",
+      "archangel": "Gabriel",
+      "order_of_angels": "Kerubim (Angelic Beings)",
+      "color": "Violet / Purple",
+      "planet": "Moon",
+      "tarot": "The Four Nines",
+      "associations": {
+        "meaning": "Foundation, the astral plane, dreams, sexuality, the gateway to manifestation",
+        "psychological": "Subconscious, dream life, sexual energy, foundation of personality",
+        "path_of_return": "Working with the subconscious"
+      },
+      "when_balanced": ["Vitality", "Psychic sensitivity", "Healthy sexuality", "Dream awareness"],
+      "when_imbalanced": ["Sexual distortion", "Psychic vulnerability", "Unconscious patterns", "Addiction"]
+    },
+    {
+      "id": "malkuth",
+      "name": "Malkuth",
+      "hebrew": "מלכות",
+      "translation": "Kingdom",
+      "position": "bottom center (receiving all above)",
+      "number": 10,
+      "pillar": "Pillar of Balance",
+      "world": "Physical World (Assiyah)",
+      "god_name": "Adonai ha-Aretz",
+      "archangel": "Sandalphon",
+      "order_of_angels": "Ishim (Souls of Fire)",
+      "color": "Citrine / Olive / Russet / Black (the four colors of Malkuth)",
+      "planet": "Earth",
+      "tarot": "The Four Tens",
+      "associations": {
+        "meaning": "Kingdom, physical reality, manifestation, the bride receives the bridegroom",
+        "psychological": "Grounding, physical existence, integration of spiritual into material",
+        "path_of_return": "Sacredness of the physical world"
+      },
+      "when_balanced": ["Grounding", "Healthy physical life", "Manifestation ability", "Spirit in matter"],
+      "when_imbalanced": ["Materialism", "Disconnection from higher", "Physical illness", "Poverty consciousness"]
+    }
+  ],
+  "paths": [
+    {
+      "number": 11,
+      "sephirot": ["keter", "chokhmah"],
+      "hebrew_letter": "Aleph (א)",
+      "meaning": "Ox",
+      "tarot": "The Fool"
+    },
+    {
+      "number": 12,
+      "sephirot": ["keter", "binah"],
+      "hebrew_letter": "Beth (ב)",
+      "meaning": "House",
+      "tarot": "The Magician"
+    },
+    {
+      "number": 13,
+      "sephirot": ["keter", "tiferet"],
+      "hebrew_letter": "Gimel (ג)",
+      "meaning": "Camel",
+      "tarot": "The High Priestess"
+    },
+    {
+      "number": 14,
+      "sephirot": ["chokhmah", "binah"],
+      "hebrew_letter": "Daleth (ד)",
+      "meaning": "Door",
+      "tarot": "The Empress"
+    },
+    {
+      "number": 15,
+      "sephirot": ["chokhmah", "tiferet"],
+      "hebrew_letter": "Heh (ה)",
+      "meaning": "Window",
+      "tarot": "The Emperor"
+    },
+    {
+      "number": 16,
+      "sephirot": ["chokhmah", "chesed"],
+      "hebrew_letter": "Vav (ו)",
+      "meaning": "Nail",
+      "tarot": "The Hierophant"
+    },
+    {
+      "number": 17,
+      "sephirot": ["binah", "tiferet"],
+      "hebrew_letter": "Zayin (ז)",
+      "meaning": "Weapon",
+      "tarot": "The Lovers"
+    },
+    {
+      "number": 18,
+      "sephirot": ["binah", "gevurah"],
+      "hebrew_letter": "Cheth (ח)",
+      "meaning": "Fence",
+      "tarot": "The Chariot"
+    },
+    {
+      "number": 19,
+      "sephirot": ["chesed", "gevurah"],
+      "hebrew_letter": "Teth (ט)",
+      "meaning": "Serpent",
+      "tarot": "Strength"
+    },
+    {
+      "number": 20,
+      "sephirot": ["chesed", "tiferet"],
+      "hebrew_letter": "Yod (י)",
+      "meaning": "Hand",
+      "tarot": "The Hermit"
+    },
+    {
+      "number": 21,
+      "sephirot": ["chesed", "netzach"],
+      "hebrew_letter": "Kaph (כ)",
+      "meaning": "Palm",
+      "tarot": "Wheel of Fortune"
+    },
+    {
+      "number": 22,
+      "sephirot": ["chesed", "yesod"],
+      "hebrew_letter": "Lamed (ל)",
+      "meaning": "Ox-goad",
+      "tarot": "Justice"
+    },
+    {
+      "number": 23,
+      "sephirot": ["gevurah", "tiferet"],
+      "hebrew_letter": "Mem (מ)",
+      "meaning": "Water",
+      "tarot": "The Hanged Man"
+    },
+    {
+      "number": 24,
+      "sephirot": ["gevurah", "hod"],
+      "hebrew_letter": "Nun (נ)",
+      "meaning": "Fish",
+      "tarot": "Death"
+    },
+    {
+      "number": 25,
+      "sephirot": ["gevurah", "yesod"],
+      "hebrew_letter": "Samekh (ס)",
+      "meaning": "Prop",
+      "tarot": "Temperance"
+    },
+    {
+      "number": 26,
+      "sephirot": ["tiferet", "netzach"],
+      "hebrew_letter": "Ayin (ע)",
+      "meaning": "Eye",
+      "tarot": "The Devil"
+    },
+    {
+      "number": 27,
+      "sephirot": ["tiferet", "yesod"],
+      "hebrew_letter": "Peh (פ)",
+      "meaning": "Mouth",
+      "tarot": "The Tower"
+    },
+    {
+      "number": 28,
+      "sephirot": ["tiferet", "hod"],
+      "hebrew_letter": "Tzaddi (צ)",
+      "meaning": "Fish-hook",
+      "tarot": "The Star"
+    },
+    {
+      "number": 29,
+      "sephirot": ["netzach", "malkuth"],
+      "hebrew_letter": "Qoph (ק)",
+      "meaning": "Back of head",
+      "tarot": "The Moon"
+    },
+    {
+      "number": 30,
+      "sephirot": ["netzach", "hod"],
+      "hebrew_letter": "Resh (ר)",
+      "meaning": "Head",
+      "tarot": "The Sun"
+    },
+    {
+      "number": 31,
+      "sephirot": ["netzach", "yesod"],
+      "hebrew_letter": "Shin (ש)",
+      "meaning": "Tooth",
+      "tarot": "Judgment"
+    },
+    {
+      "number": 32,
+      "sephirot": ["yesod", "malkuth"],
+      "hebrew_letter": "Tau (ת)",
+      "meaning": "Cross",
+      "tarot": "The World"
+    }
+  ],
+  "pillars": [
+    {
+      "name": "Pillar of Mercy",
+      "hebrew": "Pillar of Mercy (Right Pillar)",
+      "sephirot": ["chokhmah", "chesed", "netzach"],
+      "quality": "Force, expansion, masculine"
+    },
+    {
+      "name": "Pillar of Severity",
+      "hebrew": "Pillar of Severity (Left Pillar)",
+      "sephirot": ["binah", "gevurah", "hod"],
+      "quality": "Form, constriction, feminine"
+    },
+    {
+      "name": "Pillar of Balance/Mildness",
+      "hebrew": "Pillar of Mildness (Middle Pillar)",
+      "sephirot": ["keter", "tiferet", "yesod", "malkuth"],
+      "quality": "Balance, consciousness, integration"
+    }
+  ]
+}

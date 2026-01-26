@@ -1,0 +1,311 @@
+/**
+ * Interactive Visualization Styles
+ * CSS for Chakra-Kabbalah interactive diagrams
+ */
+
+/* Main container */
+.viz-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* SVG styles */
+.viz-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Chakra styles */
+.chakra {
+  transition: all 0.3s ease;
+}
+
+.chakra:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.chakra circle {
+  transition: all 0.3s ease;
+}
+
+/* Sephira styles */
+.sephira {
+  transition: all 0.3s ease;
+}
+
+.sephira:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.sephira circle {
+  transition: all 0.3s ease;
+}
+
+/* Tooltip styles */
+.viz-tooltip {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 250px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Info panel styles */
+.viz-info-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.viz-info-panel.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+}
+
+.viz-info-panel h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.viz-info-panel .sanskrit,
+.viz-info-panel .hebrew {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.viz-info-panel .associations {
+  margin-top: 15px;
+}
+
+.viz-info-panel .associations h4 {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.viz-info-panel .association-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.viz-info-panel .association-item:last-child {
+  border-bottom: none;
+}
+
+.viz-info-panel .label {
+  font-weight: bold;
+  color: #333;
+}
+
+.viz-info-panel .value {
+  color: #666;
+  margin-left: 5px;
+}
+
+/* Control panel styles */
+.viz-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.viz-controls button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  margin: 5px 0;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.viz-controls button:hover {
+  background: #e0e0e0;
+}
+
+.viz-controls button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.viz-controls .toggle-group {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.viz-controls .toggle-group label {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.viz-controls .toggle-group input {
+  margin-right: 8px;
+}
+
+/* Legend styles */
+.viz-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.viz-legend .legend-item {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.viz-legend .legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Correspondence line animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    stroke-width: 2;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 4;
+  }
+}
+
+.correspondence-line {
+  animation: pulse 3s ease-in-out infinite;
+  stroke-dasharray: 5, 5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .viz-info-panel {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  .viz-controls {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .viz-legend {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+}
+
+/* Loading state */
+.viz-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #666;
+}
+
+.viz-loading::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Accessibility */
+.viz-container:focus-within .chakra:hover,
+.viz-container:focus-within .sephira:hover {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .viz-controls,
+  .viz-legend {
+    display: none;
+  }
+
+  .viz-info-panel {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}

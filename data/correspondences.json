@@ -1,0 +1,220 @@
+{
+  "mapping_system": "Chakra-Kabbalah Correspondences",
+  "description": "Traditional correspondences between the 7 chakra system and the 10 sephirot of Kabbalah, primarily from Western Esoteric traditions (Theosophical, Hermetic Qabalah). These mappings represent syncretic approaches to integrate Eastern and Western mystical systems.",
+  "source_note": "Multiple mapping traditions exist. This file includes the most common correspondences, with notes on variations.",
+  "mappings": [
+    {
+      "tradition": "Theosophical / Golden Dawn",
+      "description": "The most widely used correspondence system in Western Esotericism, developed through Theosophical Society and Hermetic Order of the Golden Dawn traditions.",
+      "correspondences": [
+        {
+          "chakra_id": "sahasrara",
+          "sephira_id": "keter",
+          "confidence": "strong",
+          "rationale": "Both represent the crown, highest point of divine connection, transcendence, and unity consciousness. Keter means 'Crown' directly corresponding to Sahasrara (Crown Chakra).",
+          "themes": ["Transcendence", "Divine Will", "Unity", "Source"]
+        },
+        {
+          "chakra_id": "ajna",
+          "sephira_id": "chokhmah",
+          "confidence": "moderate",
+          "rationale": "Some traditions map Ajna to Chokhmah (intuitive wisdom), while others include Binah as well. Ajna represents intuitive perception similar to Chokhmah's creative wisdom.",
+          "themes": ["Intuition", "Inner Vision", "Wisdom", "Creative Insight"]
+        },
+        {
+          "chakra_id": "vishuddha",
+          "sephira_id": "binah",
+          "confidence": "moderate",
+          "rationale": "Less common mapping. Some associate Vishuddha's clarity of expression with Binah's understanding. Alternative mappings place Da'ath (the hidden sephira) here.",
+          "themes": ["Expression", "Understanding", "Form"]
+        },
+        {
+          "chakra_id": "anahata",
+          "sephira_id": "tiferet",
+          "confidence": "strong",
+          "rationale": "Widely accepted correspondence. Both are the center of their respective systems (4th of 7 chakras, 6th of 10 sephirot), representing balance, harmony, beauty, love, and integration.",
+          "themes": ["Balance", "Harmony", "Love", "Beauty", "Integration", "Heart Center"]
+        },
+        {
+          "chakra_id": "manipura",
+          "sephira_id": "gevurah",
+          "confidence": "moderate",
+          "rationale": "Manipura's fire and will correspond to Gevurah's strength and judgment. Some traditions also associate it with Chesed (expansion) as Manipura represents personal power.",
+          "themes": ["Will", "Power", "Strength", "Fire"]
+        },
+        {
+          "chakra_id": "svadhisthana",
+          "sephira_id": "yesod",
+          "confidence": "strong",
+          "rationale": "Both represent the emotional/creative/sexual center, foundation of consciousness, and the gateway between physical and spiritual. Yesod is called 'Foundation' similar to how Svadhisthana supports the higher chakras.",
+          "themes": ["Creativity", "Emotion", "Sexuality", "Foundation", "Astral Plane"]
+        },
+        {
+          "chakra_id": "muladhara",
+          "sephira_id": "malkuth",
+          "confidence": "strong",
+          "rationale": "Both represent the physical plane, grounding, manifestation, and the base upon which the entire system rests. Malkuth (Kingdom) is the physical world, Muladhara is the root that grounds in physical reality.",
+          "themes": ["Grounding", "Physical Reality", "Manifestation", "Foundation", "Earth"]
+        }
+      ],
+      "additional_correspondences": [
+        {
+          "note": "Chesed (Mercy) is sometimes associated with the heart center alongside Tiferet, representing the expansive aspect of love.",
+          "sephira_id": "chesed",
+          "related_chakras": ["anahata", "manipura"]
+        },
+        {
+          "note": "Hod (Glory/Intellect) and Netzach (Victory/Emotion) form a polar pair that corresponds to the interplay of mind and emotion, often associated with the throat and third eye working together.",
+          "sephira_id": ["hod", "netzach"],
+          "related_chakras": ["vishuddha", "ajna"]
+        }
+      ]
+    },
+    {
+      "tradition": "Alice Bailey / Arcane School",
+      "description": "Alice Bailey's teachings through the Tibetan Master Djwhal Khul offer a more complex mapping that integrates the 7 chakras with the Tree of Life and the 7 rays.",
+      "correspondences": [
+        {
+          "chakra_id": "sahasrara",
+          "sephira_id": "keter",
+          "ray": "First Ray (Will/Power)",
+          "themes": ["Divine Will", "Purpose", "Synthesis"]
+        },
+        {
+          "chakra_id": "ajna",
+          "sephira_id": "chokhmah",
+          "ray": "Fifth Ray (Knowledge/Science)",
+          "themes": ["Illumined Mind", "Divine Knowledge"]
+        },
+        {
+          "chakra_id": "vishuddha",
+          "sephira_id": "binah",
+          "ray": "Third Ray (Active Intelligence)",
+          "themes": ["Creative Activity", "Expression"]
+        },
+        {
+          "chakra_id": "anahata",
+          "sephira_id": "tiferet",
+          "ray": "Second Ray (Love/Wisdom)",
+          "themes": ["Love-Wisdom", "Synthesis"]
+        },
+        {
+          "chakra_id": "manipura",
+          "sephira_id": "chesed",
+          "ray": "Sixth Ray (Devotion/Idealism)",
+          "themes": ["Devotion", "Idealism"]
+        },
+        {
+          "chakra_id": "svadhisthana",
+          "sephira_id": "netzach",
+          "ray": "Seventh Ray (Ceremonial Order/Magic)",
+          "themes": ["Magic", "Ritual", "Form"]
+        },
+        {
+          "chakra_id": "muladhara",
+          "sephira_id": "malkuth",
+          "ray": "Fourth Ray (Harmony through Conflict)",
+          "themes": ["Physical Plane", "Harmony in Matter"]
+        }
+      ]
+    },
+    {
+      "tradition": "Alternative / Expanded",
+      "description": "Various other mapping systems that have been proposed, including those incorporating the hidden sephira Da'ath and working with 12-chakra systems.",
+      "correspondences": [
+        {
+          "chakra_id": "sahasrara",
+          "sephira_id": ["keter", "chokhmah", "binah"],
+          "description": "Supernal triad (Top 3 sephirot) correspond to crown and above",
+          "tradition": "Triadic Mapping"
+        },
+        {
+          "chakra_id": "vishuddha",
+          "sephira_id": "da'ath",
+          "description": "Da'ath (Knowledge/Hidden Sephira) is sometimes placed at the throat, representing the bridge between higher and lower consciousness",
+          "tradition": "Da'ath Mapping"
+        },
+        {
+          "chakra_id": "anahata",
+          "sephira_id": ["chesed", "gevurah", "tiferet"],
+          "description": "The middle triad of ethical sephirot corresponds to the heart region",
+          "tradition": "Triadic Mapping"
+        },
+        {
+          "chakra_id": ["manipura", "svadhisthana"],
+          "sephira_id": ["netzach", "hod", "yesod"],
+          "description": "The astral triad corresponds to solar plexus and sacral regions",
+          "tradition": "Triadic Mapping"
+        },
+        {
+          "chakra_id": "muladhara",
+          "sephira_id": "malkuth",
+          "description": "Physical reality",
+          "tradition": "Standard"
+        }
+      ]
+    }
+  ],
+  "synthetic_integrations": [
+    {
+      "title": "The Middle Pillar Alignment",
+      "description": "Practices that work with both systems simultaneously, particularly focusing on the Middle Pillar (Keter-Tiferet-Yesod-Malkuth) and the central chakra column.",
+      "combination_points": [
+        "Keter + Sahasrara: Crown of divine will",
+        "Tiferet + Anahata: Heart center of balance",
+        "Yesod + Svadhisthana: Foundation of creative energy",
+        "Malkuth + Muladhara: Root of physical manifestation"
+      ]
+    },
+    {
+      "title": "Pillar Balancing with Chakra Pairs",
+      "description": "Working with the left/right pillars (Gevurah/Hod and Chesed/Netzach) as polarities that can be balanced through chakra work.",
+      "polarities": [
+        {
+          "pole": "Left Pillar (Severity/Intellect)",
+          "sephirot": ["binah", "gevurah", "hod"],
+          "chakra_affinities": ["vishuddha", "manipura"],
+          "qualities": ["Form", "Structure", "Intellect", "Discipline"]
+        },
+        {
+          "pole": "Right Pillar (Mercy/Emotion)",
+          "sephirot": ["chokhmah", "chesed", "netzach"],
+          "chakra_affinities": ["svadhisthana", "ajna"],
+          "qualities": ["Force", "Expansion", "Emotion", "Intuition"]
+        },
+        {
+          "pole": "Middle Pillar (Balance)",
+          "sephirot": ["keter", "tiferet", "yesod", "malkuth"],
+          "chakra_affinities": ["sahasrara", "anahata", "muladhara"],
+          "qualities": ["Consciousness", "Balance", "Integration"]
+        }
+      ]
+    },
+    {
+      "title": "Psychological Integration Model",
+      "description": "Using both systems together for psychological work and self-understanding.",
+      "approach": [
+        "Root/Foundation (Muladhara + Malkuth): Grounding, safety, physical embodiment",
+        "Creative/Emotional (Svadhisthana + Yesod): Emotional processing, creativity, subconscious",
+        "Power/Will (Manipura + Gevurah/Chesed): Personal power, boundaries, action",
+        "Heart/Integration (Anahata + Tiferet): Love, balance, healing, integration of opposites",
+        "Expression/Understanding (Vishuddha + Hod): Communication, intellect, creative expression",
+        "Intuition/Wisdom (Ajna + Chokhmah): Inner vision, intuition, wisdom",
+        "Transcendence (Sahasrara + Keter): Divine connection, unity, self-realization"
+      ]
+    }
+  ],
+  "practice_notes": [
+    "These correspondences are synthetic and syncretic, not traditional to either original system",
+    "Different traditions and teachers may use different mappings",
+    "The value of correspondence is in practical application for self-understanding and spiritual practice",
+    "When working with both systems, awareness of cultural appropriation and respect for source traditions is essential",
+    "Personal experiential verification should guide the use of any correspondence system"
+  ],
+  "research_notes": [
+    "Custom mappings and correspondences can be added here",
+    "Personal insights and correlations should be documented",
+    "Cross-references with other systems (astrology, tarot, psychology, etc.) can be integrated",
+    "Regional and historical variations in both systems are worth documenting"
+  ]
+}

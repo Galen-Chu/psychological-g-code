@@ -1,0 +1,34 @@
+{
+  "name": "psychological-g-code",
+  "version": "0.1.0",
+  "description": "Chakra-Kabbalah correspondence system and reference resource",
+  "main": "src/assessment-engine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "node scripts/validate-data.js",
+    "build-viz": "echo \"Visualization builds directly in browser\"",
+    "serve": "npx http-server . -p 8080 -o src/visualization/example.html"
+  },
+  "keywords": [
+    "chakra",
+    "kabbalah",
+    "tree of life",
+    "correspondence",
+    "psychological",
+    "spiritual",
+    "mystical",
+    "esoteric",
+    "assessment",
+    "visualization"
+  ],
+  "author": "Galen Chu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Galen-Chu/psychological-g-code.git"
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0"
+  },
+  "dependencies": {}
+}

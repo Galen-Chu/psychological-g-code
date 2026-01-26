@@ -1,0 +1,152 @@
+{
+  "system": "Chakra",
+  "description": "The seven main energy centers in Hindu/Buddhist tantric traditions, arranged along the central channel (sushumna) of the subtle body.",
+  "source_tradition": "Hindu Tantra / Buddhist Tantra",
+  "chakras": [
+    {
+      "id": "muladhara",
+      "name": "Muladhara (Root Chakra)",
+      "sanskrit": "मूलाधार",
+      "translation": "Root Support",
+      "location": "Base of spine / perineum",
+      "element": "Earth",
+      "color": "Red",
+      "seed_syllable": "Lam (लं)",
+      "number": 1,
+      "associations": {
+        "physical": "Survival, grounding, basic needs, elimination",
+        "emotional": "Sense of safety, security, stability",
+        "mental": "Groundedness, connection to physical reality",
+        "gland": "Adrenal glands / Gonads",
+        "planets": ["Mars", "Saturn"]
+      },
+      "when_balanced": ["Sense of safety", "Stability", "Groundedness", "Practicality"],
+      "when_imbalanced": ["Fear", "Anxiety", "Insecurity", "Disconnection from reality"]
+    },
+    {
+      "id": "svadhisthana",
+      "name": "Svadhisthana (Sacral Chakra)",
+      "sanskrit": "स्वाधिष्ठान",
+      "translation": "Where the self is established",
+      "location": "Lower abdomen, below navel",
+      "element": "Water",
+      "color": "Orange",
+      "seed_syllable": "Vam (वं)",
+      "number": 2,
+      "associations": {
+        "physical": "Reproduction, sexual organs, kidneys, bladder",
+        "emotional": "Pleasure, sexuality, emotional expression, creativity",
+        "mental": "Desire, relationships, sensuality",
+        "gland": "Gonads",
+        "planets": ["Moon", "Venus"]
+      },
+      "when_balanced": ["Healthy expression of emotions", "Creativity", "Pleasure", "Intimacy"],
+      "when_imbalanced": ["Guilt", "Sexual dysfunction", "Emotional volatility", "Addiction"]
+    },
+    {
+      "id": "manipura",
+      "name": "Manipura (Solar Plexus Chakra)",
+      "sanskrit": "मणिपूर",
+      "translation": "City of Jewels",
+      "location": "Upper abdomen, stomach area",
+      "element": "Fire",
+      "color": "Yellow",
+      "seed_syllable": "Ram (रं)",
+      "number": 3,
+      "associations": {
+        "physical": "Digestion, metabolism, stomach, liver",
+        "emotional": "Personal power, will, self-esteem, transformation",
+        "mental": "Ambition, determination, action",
+        "gland": "Pancreas",
+        "planets": ["Sun", "Mars"]
+      },
+      "when_balanced": ["Confidence", "Self-discipline", "Willpower", "Personal effectiveness"],
+      "when_imbalanced": ["Low self-esteem", "Control issues", "Anger", "Digestive problems"]
+    },
+    {
+      "id": "anahata",
+      "name": "Anahata (Heart Chakra)",
+      "sanskrit": "अनाहत",
+      "translation": "Unstruck sound",
+      "location": "Center of chest",
+      "element": "Air",
+      "color": "Green (also Pink/Rose)",
+      "seed_syllable": "Yam (यं)",
+      "number": 4,
+      "associations": {
+        "physical": "Heart, lungs, chest, circulation, immune system",
+        "emotional": "Love, compassion, empathy, forgiveness, acceptance",
+        "mental": "Relationships, harmony, balance",
+        "gland": "Thymus",
+        "planets": ["Venus", "Sun"]
+      },
+      "when_balanced": ["Unconditional love", "Compassion", "Emotional balance", "Harmonious relationships"],
+      "when_imbalanced": ["Grief", "Heart closedness", "Jealousy", "Isolation"]
+    },
+    {
+      "id": "vishuddha",
+      "name": "Vishuddha (Throat Chakra)",
+      "sanskrit": "विशुद्ध",
+      "translation": "Especially pure",
+      "location": "Throat, neck",
+      "element": "Ether/Space",
+      "color": "Blue",
+      "seed_syllable": "Ham (हं)",
+      "number": 5,
+      "associations": {
+        "physical": "Throat, thyroid, neck, mouth, jaw, voice",
+        "emotional": "Communication, self-expression, authenticity, speaking truth",
+        "mental": "Creative expression, listening, teaching",
+        "gland": "Thyroid",
+        "planets": ["Mercury", "Moon"]
+      },
+      "when_balanced": ["Clear communication", "Authentic expression", "Creative flow", "Good listener"],
+      "when_imbalanced": ["Fear of speaking", "Communication problems", "Thyroid issues", "Inauthenticity"]
+    },
+    {
+      "id": "ajna",
+      "name": "Ajna (Third Eye / Brow Chakra)",
+      "sanskrit": "आज्ञा",
+      "translation": "Command / Perception",
+      "location": "Between eyebrows, forehead",
+      "element": "Light / Mind",
+      "color": "Indigo / Purple",
+      "seed_syllable": "Om (ॐ)",
+      "number": 6,
+      "associations": {
+        "physical": "Eyes, brain, pineal gland, pituitary gland",
+        "emotional": "Intuition, insight, inner vision, wisdom",
+        "mental": "Clarity, perception, spiritual awareness",
+        "gland": "Pituitary",
+        "planets": ["Jupiter", "Saturn"]
+      },
+      "when_balanced": ["Intuitive clarity", "Inner wisdom", "Perception beyond physical", "Dream awareness"],
+      "when_imbalanced": ["Confusion", "Rigidity", "Cynicism", "Headaches", "Vision problems"]
+    },
+    {
+      "id": "sahasrara",
+      "name": "Sahasrara (Crown Chakra)",
+      "sanskrit": "सहस्रार",
+      "translation": "Thousand-petaled",
+      "location": "Crown of head, extending upward",
+      "element": "Consciousness / Beyond elements",
+      "color": "Violet / White / Gold",
+      "seed_syllable": "Silence / Om (ॐ)",
+      "number": 7,
+      "associations": {
+        "physical": "Brain, nervous system, crown of head",
+        "emotional": "Spiritual connection, transcendence, enlightenment, unity",
+        "mental": "Pure consciousness, divine connection, beyond thought",
+        "gland": "Pineal",
+        "planets": ["Neptune", "Uranus"]
+      },
+      "when_balanced": ["Spiritual connection", "Transcendence", "Expanded awareness", "Unity consciousness"],
+      "when_imbalanced": ["Disconnection", "Cynicism", "Rigid beliefs", "Spiritual bypassing"]
+    }
+  ],
+  "notes": [
+    "Some traditions add additional minor chakras, but these 7 form the core system",
+    "The chakras can be understood as stations of consciousness along the path of spiritual awakening",
+    "Each chakra represents both a limitation and a gateway to higher awareness"
+  ]
+}

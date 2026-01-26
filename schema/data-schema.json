@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Psychological G-Code Data Schema",
+  "description": "Schema for Chakra-Kabbalah correspondence data",
+  "definitions": {
+    "chakra": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "sanskrit": { "type": "string" },
+        "translation": { "type": "string" },
+        "location": { "type": "string" },
+        "element": { "type": "string" },
+        "color": { "type": "string" },
+        "seed_syllable": { "type": "string" },
+        "number": { "type": "integer", "minimum": 1, "maximum": 7 },
+        "associations": {
+          "type": "object",
+          "properties": {
+            "physical": { "type": "string" },
+            "emotional": { "type": "string" },
+            "mental": { "type": "string" },
+            "gland": { "type": "string" },
+            "planets": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "when_balanced": { "type": "array", "items": { "type": "string" } },
+        "when_imbalanced": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["id", "name", "number", "location"]
+    },
+    "sephira": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "hebrew": { "type": "string" },
+        "translation": { "type": "string" },
+        "position": { "type": "string" },
+        "number": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "pillar": {
+          "type": "string",
+          "enum": ["Pillar of Mercy", "Pillar of Severity", "Pillar of Balance", null]
+        },
+        "archangel": { "type": "string" },
+        "planet": { "type": "string" },
+        "tarot": { "type": "string" },
+        "associations": {
+          "type": "object",
+          "properties": {
+            "meaning": { "type": "string" },
+            "psychological": { "type": "string" },
+            "path_of_return": { "type": "string" }
+          }
+        },
+        "when_balanced": { "type": "array", "items": { "type": "string" } },
+        "when_imbalanced": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["id", "name", "number", "position"]
+    },
+    "correspondence": {
+      "type": "object",
+      "properties": {
+        "tradition": { "type": "string" },
+        "description": { "type": "string" },
+        "correspondences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "chakra_id": { "type": "string" },
+              "sephira_id": { "type": "string" },
+              "confidence": {
+                "type": "string",
+                "enum": ["strong", "moderate", "weak", "none"]
+              },
+              "rationale": { "type": "string" },
+              "themes": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": ["chakra_id", "sephira_id"]
+          }
+        }
+      }
+    }
+  },
+  "anyOf": [
+    { "$ref": "#/definitions/chakra" },
+    { "$ref": "#/definitions/sephira" },
+    { "$ref": "#/definitions/correspondence" }
+  ]
+}

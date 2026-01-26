@@ -1,0 +1,460 @@
+{
+  "assessment_system": "Chakra-Kabbalah Psychological Assessment",
+  "description": "Self-reflection questions to assess balance across chakras and sephirot. This is for self-exploration, not clinical diagnosis.",
+  "disclaimer": "This assessment is for self-reflection and personal growth only. It is not a substitute for professional mental health care. If you're experiencing severe symptoms, please consult a qualified mental health professional.",
+  "levels": [
+    {
+      "level": 1,
+      "chakra_id": "muladhara",
+      "sephira_id": "malkuth",
+      "name": "Foundation / Grounding",
+      "questions": [
+        {
+          "id": "L1_001",
+          "question": "I feel safe and secure in my daily life",
+          "reverse_scoring": false,
+          "category": "safety"
+        },
+        {
+          "id": "L1_002",
+          "question": "I have a consistent daily routine that supports my wellbeing",
+          "reverse_scoring": false,
+          "category": "routine"
+        },
+        {
+          "id": "L1_003",
+          "question": "I feel connected to my physical body and its needs",
+          "reverse_scoring": false,
+          "category": "body_awareness"
+        },
+        {
+          "id": "L1_004",
+          "question": "I spend time in nature or feel grounded in my environment",
+          "reverse_scoring": false,
+          "category": "grounding"
+        },
+        {
+          "id": "L1_005",
+          "question": "I feel anxious or fearful about my safety or future",
+          "reverse_scoring": true,
+          "category": "anxiety"
+        },
+        {
+          "id": "L1_006",
+          "question": "I have financial stability or feel secure about my material needs",
+          "reverse_scoring": false,
+          "category": "material_security"
+        },
+        {
+          "id": "L1_007",
+          "question": "I am able to relax and feel at ease in my body",
+          "reverse_scoring": false,
+          "category": "relaxation"
+        },
+        {
+          "id": "L1_008",
+          "question": "I feel rooted and present, not spaced out or disconnected",
+          "reverse_scoring": false,
+          "category": "presence"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "chakra_id": "svadhisthana",
+      "sephira_id": "yesod",
+      "name": "Emotional / Creative Flow",
+      "questions": [
+        {
+          "id": "L2_001",
+          "question": "I am comfortable experiencing and expressing my emotions",
+          "reverse_scoring": false,
+          "category": "emotional_expression"
+        },
+        {
+          "id": "L2_002",
+          "question": "I engage in creative activities that bring me joy",
+          "reverse_scoring": false,
+          "category": "creativity"
+        },
+        {
+          "id": "L2_003",
+          "question": "I have a healthy relationship with my sexuality",
+          "reverse_scoring": false,
+          "category": "sexuality"
+        },
+        {
+          "id": "L2_004",
+          "question": "I allow myself to experience pleasure without guilt",
+          "reverse_scoring": false,
+          "category": "pleasure"
+        },
+        {
+          "id": "L2_005",
+          "question": "I feel emotionally numb or disconnected from my feelings",
+          "reverse_scoring": true,
+          "category": "emotional_numbedness"
+        },
+        {
+          "id": "L2_006",
+          "question": "My emotions feel manageable, not overwhelming",
+          "reverse_scoring": false,
+          "category": "emotional_regulation"
+        },
+        {
+          "id": "L2_007",
+          "question": "I remember my dreams and find meaning in them",
+          "reverse_scoring": false,
+          "category": "dream_awareness"
+        },
+        {
+          "id": "L2_008",
+          "question": "I am able to be intimate and vulnerable with others",
+          "reverse_scoring": false,
+          "category": "intimacy"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "chakra_id": "manipura",
+      "sephira_id": ["gevurah", "chesed"],
+      "name": "Personal Power / Will",
+      "questions": [
+        {
+          "id": "L3_001",
+          "question": "I feel confident in my ability to accomplish my goals",
+          "reverse_scoring": false,
+          "category": "confidence"
+        },
+        {
+          "id": "L3_002",
+          "question": "I am able to set and maintain healthy boundaries",
+          "reverse_scoring": false,
+          "category": "boundaries"
+        },
+        {
+          "id": "L3_003",
+          "question": "I take responsibility for my actions and life circumstances",
+          "reverse_scoring": false,
+          "category": "responsibility"
+        },
+        {
+          "id": "L3_004",
+          "question": "I can make decisions without excessive doubt or hesitation",
+          "reverse_scoring": false,
+          "category": "decisiveness"
+        },
+        {
+          "id": "L3_005",
+          "question": "I feel powerless or that life happens to me",
+          "reverse_scoring": true,
+          "category": "powerlessness"
+        },
+        {
+          "id": "L3_006",
+          "question": "I balance assertion with compassion in my interactions",
+          "reverse_scoring": false,
+          "category": "balanced_assertion"
+        },
+        {
+          "id": "L3_007",
+          "question": "I am motivated and have a sense of purpose",
+          "reverse_scoring": false,
+          "category": "motivation"
+        },
+        {
+          "id": "L3_008",
+          "question": "I am neither controlling nor passive in relationships",
+          "reverse_scoring": false,
+          "category": "power_balance"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "chakra_id": "anahata",
+      "sephira_id": "tiferet",
+      "name": "Heart / Integration",
+      "questions": [
+        {
+          "id": "L4_001",
+          "question": "I am able to love and accept myself as I am",
+          "reverse_scoring": false,
+          "category": "self_love"
+        },
+        {
+          "id": "L4_002",
+          "question": "I feel compassion for others without losing myself",
+          "reverse_scoring": false,
+          "category": "compassion"
+        },
+        {
+          "id": "L4_003",
+          "question": "I am able to forgive myself and others",
+          "reverse_scoring": false,
+          "category": "forgiveness"
+        },
+        {
+          "id": "L4_004",
+          "question": "I maintain healthy boundaries in relationships",
+          "reverse_scoring": false,
+          "category": "relationship_boundaries"
+        },
+        {
+          "id": "L4_005",
+          "question": "I feel isolated or disconnected from others",
+          "reverse_scoring": true,
+          "category": "isolation"
+        },
+        {
+          "id": "L4_006",
+          "question": "I can balance giving and receiving in relationships",
+          "reverse_scoring": false,
+          "category": "give_and_take"
+        },
+        {
+          "id": "L4_007",
+          "question": "I experience joy and gratitude in my daily life",
+          "reverse_scoring": false,
+          "category": "joy_gratitude"
+        },
+        {
+          "id": "L4_008",
+          "question": "I accept both my light and shadow aspects",
+          "reverse_scoring": false,
+          "category": "self_acceptance"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "chakra_id": "vishuddha",
+      "sephira_id": ["hod", "binah"],
+      "name": "Expression / Communication",
+      "questions": [
+        {
+          "id": "L5_001",
+          "question": "I am able to express my truth authentically",
+          "reverse_scoring": false,
+          "category": "authentic_expression"
+        },
+        {
+          "id": "L5_002",
+          "question": "I am a good listener and can truly hear others",
+          "reverse_scoring": false,
+          "category": "listening"
+        },
+        {
+          "id": "L5_003",
+          "question": "I communicate clearly and effectively",
+          "reverse_scoring": false,
+          "category": "clarity"
+        },
+        {
+          "id": "L5_004",
+          "question": "I use my voice to speak up for myself and others",
+          "reverse_scoring": false,
+          "category": "self_advocacy"
+        },
+        {
+          "id": "L5_005",
+          "question": "I fear speaking my truth or being misunderstood",
+          "reverse_scoring": true,
+          "category": "fear_of_speaking"
+        },
+        {
+          "id": "L5_006",
+          "question": "I express myself creatively through art, writing, or speech",
+          "reverse_scoring": false,
+          "category": "creative_expression"
+        },
+        {
+          "id": "L5_007",
+          "question": "I balance speaking with listening",
+          "reverse_scoring": false,
+          "category": "communication_balance"
+        },
+        {
+          "id": "L5_008",
+          "question": "I can communicate difficult truths with kindness",
+          "reverse_scoring": false,
+          "category": "truth_with_compassion"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "chakra_id": "ajna",
+      "sephira_id": "chokhmah",
+      "name": "Intuition / Vision",
+      "questions": [
+        {
+          "id": "L6_001",
+          "question": "I trust my intuition and inner knowing",
+          "reverse_scoring": false,
+          "category": "intuitive_trust"
+        },
+        {
+          "id": "L6_002",
+          "question": "I have a clear sense of vision for my life",
+          "reverse_scoring": false,
+          "category": "vision"
+        },
+        {
+          "id": "L6_003",
+          "question": "I balance logic and intuition in decision-making",
+          "reverse_scoring": false,
+          "category": "logic_intuition_balance"
+        },
+        {
+          "id": "L6_004",
+          "question": "I pay attention to my dreams and inner guidance",
+          "reverse_scoring": false,
+          "category": "inner_guidance"
+        },
+        {
+          "id": "L6_005",
+          "question": "I am cynical or dismissive of intuitive experiences",
+          "reverse_scoring": true,
+          "category": "cynicism"
+        },
+        {
+          "id": "L6_006",
+          "question": "I can see patterns and make connections",
+          "reverse_scoring": false,
+          "category": "pattern_recognition"
+        },
+        {
+          "id": "L6_007",
+          "question": "I have mental clarity and focus",
+          "reverse_scoring": false,
+          "category": "mental_clarity"
+        },
+        {
+          "id": "L6_008",
+          "question": "I access wisdom beyond mere intellect",
+          "reverse_scoring": false,
+          "category": "wisdom"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "chakra_id": "sahasrara",
+      "sephira_id": "keter",
+      "name": "Transcendence / Connection",
+      "questions": [
+        {
+          "id": "L7_001",
+          "question": "I feel connected to something greater than myself",
+          "reverse_scoring": false,
+          "category": "connection"
+        },
+        {
+          "id": "L7_002",
+          "question": "I experience moments of awe or transcendence",
+          "reverse_scoring": false,
+          "category": "transcendence"
+        },
+        {
+          "id": "L7_003",
+          "question": "My life has meaning and purpose",
+          "reverse_scoring": false,
+          "category": "meaning"
+        },
+        {
+          "id": "L7_004",
+          "question": "I integrate spiritual awareness into daily life",
+          "reverse_scoring": false,
+          "category": "integration"
+        },
+        {
+          "id": "L7_005",
+          "question": "I feel alone or existentially despairing",
+          "reverse_scoring": true,
+          "category": "existential_despair"
+        },
+        {
+          "id": "L7_006",
+          "question": "I practice humility and recognize my limitations",
+          "reverse_scoring": false,
+          "category": "humility"
+        },
+        {
+          "id": "L7_007",
+          "question": "I feel gratitude for being alive",
+          "reverse_scoring": false,
+          "category": "gratitude"
+        },
+        {
+          "id": "L7_008",
+          "question": "I experience unity consciousness or interconnectedness",
+          "reverse_scoring": false,
+          "category": "unity"
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "scale": {
+      "1": "Strongly Disagree",
+      "2": "Disagree",
+      "3": "Neutral",
+      "4": "Agree",
+      "5": "Strongly Agree"
+    },
+    "interpretation": {
+      "very_low": {
+        "range": [8, 16],
+        "description": "Significant deficiency - This area may need attention and support"
+      },
+      "low": {
+        "range": [17, 24],
+        "description": "Moderate deficiency - Consider focusing on this area"
+      },
+      "balanced": {
+        "range": [25, 32],
+        "description": "Balanced - This area is functioning well"
+      },
+      "high": {
+        "range": [33, 40],
+        "description": "Strong - This area is a strength for you"
+      }
+    },
+    "note": "Scores are calculated per level. Reverse-scored questions have their values inverted before summing."
+  },
+  "pillar_assessment": {
+    "description": "Additional assessment to determine pillar dominance",
+    "pillar_of_mercy": {
+      "traits": ["expansive", "emotional", "creative", "giving", "intuitive"],
+      "questions": [
+        "I tend to be generous and giving",
+        "Emotions guide my decisions",
+        "I prefer flexibility over structure",
+        "I value compassion over rules",
+        "I am spontaneous and creative"
+      ]
+    },
+    "pillar_of_severity": {
+      "traits": ["structured", "disciplined", "analytical", "boundaried", "rational"],
+      "questions": [
+        "I value structure and order",
+        "Logic guides my decisions",
+        "I prefer rules over exceptions",
+        "I value justice over mercy",
+        "I am disciplined and focused"
+      ]
+    },
+    "pillar_of_balance": {
+      "traits": ["integrated", "conscious", "flexible", "centered", "aware"],
+      "questions": [
+        "I can be both firm and kind",
+        "I balance logic and emotion",
+        "I adapt to situations appropriately",
+        "I seek harmony and balance",
+        "I am aware of my patterns"
+      ]
+    }
+  }
+}

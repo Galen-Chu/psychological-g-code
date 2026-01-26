@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakra-Kabbalah Interactive Visualization</title>
+    <link rel="stylesheet" href="interactive-diagram.css">
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px;">
+        <h1 style="text-align: center; color: #333;">Psychological G-Code</h1>
+        <h2 style="text-align: center; color: #666; font-weight: normal;">Chakra-Kabbalah Integrated Visualization</h2>
+
+        <div id="visualization-container" class="viz-container" style="height: 700px; margin-top: 30px;">
+            <!-- Visualization will be rendered here -->
+        </div>
+
+        <!-- Info Panel (populated dynamically) -->
+        <div id="info-panel" class="viz-info-panel hidden" style="display: none;">
+            <h3 id="info-title">Select an element</h3>
+            <div id="info-content"></div>
+        </div>
+    </div>
+
+    <script src="interactive-diagram.js"></script>
+    <script>
+        // Sample data for info panel
+        const chakraData = {
+            sahasrara: {
+                name: "Sahasrara (Crown Chakra)",
+                sanskrit: "सहस्रार",
+                translation: "Thousand-petaled",
+                location: "Crown of head",
+                element: "Consciousness",
+                color: "Violet / White",
+                associations: {
+                    meaning: "Transcendence, divine connection, unity consciousness",
+                    psychological: "Self-realization, enlightenment, spiritual awareness"
+                }
+            },
+            ajna: {
+                name: "Ajna (Third Eye)",
+                sanskrit: "आज्ञा",
+                translation: "Command",
+                location: "Between eyebrows",
+                element: "Light",
+                color: "Indigo",
+                associations: {
+                    meaning: "Intuition, inner vision, wisdom",
+                    psychological: "Insight, clarity, perception beyond physical"
+                }
+            },
+            vishuddha: {
+                name: "Vishuddha (Throat)",
+                sanskrit: "विशुद्ध",
+                translation: "Purity",
+                location: "Throat",
+                element: "Ether",
+                color: "Blue",
+                associations: {
+                    meaning: "Communication, self-expression, truth",
+                    psychological: "Authentic expression, creative flow"
+                }
+            },
+            anahata: {
+                name: "Anahata (Heart)",
+                sanskrit: "अनाहत",
+                translation: "Unstruck",
+                location: "Center of chest",
+                element: "Air",
+                color: "Green",
+                associations: {
+                    meaning: "Love, compassion, balance",
+                    psychological: "Emotional integration, harmony, relationships"
+                }
+            },
+            manipura: {
+                name: "Manipura (Solar Plexus)",
+                sanskrit: "मणिपूर",
+                translation: "City of Jewels",
+                location: "Upper abdomen",
+                element: "Fire",
+                color: "Yellow",
+                associations: {
+                    meaning: "Personal power, will, transformation",
+                    psychological: "Confidence, boundaries, self-esteem"
+                }
+            },
+            svadhisthana: {
+                name: "Svadhisthana (Sacral)",
+                sanskrit: "स्वाधिष्ठान",
+                translation: "Where self is established",
+                location: "Lower abdomen",
+                element: "Water",
+                color: "Orange",
+                associations: {
+                    meaning: "Emotion, creativity, sexuality",
+                    psychological: "Emotional flow, pleasure, intimacy"
+                }
+            },
+            muladhara: {
+                name: "Muladhara (Root)",
+                sanskrit: "मूलाधार",
+                translation: "Root Support",
+                location: "Base of spine",
+                element: "Earth",
+                color: "Red",
+                associations: {
+                    meaning: "Safety, grounding, survival",
+                    psychological: "Security, stability, connection to physical"
+                }
+            }
+        };
+
+        const sephiraData = {
+            keter: {
+                name: "Keter",
+                hebrew: "כתר",
+                translation: "Crown",
+                meaning: "Pure consciousness, divine will, unity",
+                psychological: "Transcendence, enlightenment"
+            },
+            chokhmah: {
+                name: "Chokhmah",
+                hebrew: "חכמה",
+                translation: "Wisdom",
+                meaning: "Creative force, intuitive wisdom",
+                psychological: "Intuitive insight, creative spark"
+            },
+            binah: {
+                name: "Binah",
+                hebrew: "בינה",
+                translation: "Understanding",
+                meaning: "Form, structure, understanding",
+                psychological: "Deep understanding, synthesis"
+            },
+            chesed: {
+                name: "Chesed",
+                hebrew: "חסד",
+                translation: "Mercy",
+                meaning: "Expansion, benevolence, grace",
+                psychological: "Generosity, compassion"
+            },
+            gevurah: {
+                name: "Gevurah",
+                hebrew: "גבורה",
+                translation: "Severity",
+                meaning: "Discipline, judgment, strength",
+                psychological: "Willpower, discernment"
+            },
+            tiferet: {
+                name: "Tiferet",
+                hebrew: "תפארת",
+                translation: "Beauty",
+                meaning: "Harmony, balance, integration",
+                psychological: "Integration of opposites"
+            },
+            netzach: {
+                name: "Netzach",
+                hebrew: "נצח",
+                translation: "Victory",
+                meaning: "Creativity, emotions, endurance",
+                psychological: "Emotional intelligence, passion"
+            },
+            hod: {
+                name: "Hod",
+                hebrew: "הוד",
+                translation: "Glory",
+                meaning: "Intellect, communication, logic",
+                psychological: "Rational mind, analysis"
+            },
+            yesod: {
+                name: "Yesod",
+                hebrew: "יסוד",
+                translation: "Foundation",
+                meaning: "Foundation, dreams, sexuality",
+                psychological: "Subconscious, emotional energy"
+            },
+            malkuth: {
+                name: "Malkuth",
+                hebrew: "מלכות",
+                translation: "Kingdom",
+                meaning: "Physical reality, manifestation",
+                psychological: "Grounding, physical existence"
+            }
+        };
+
+        // Initialize visualization
+        const viz = new ChakraKabbalahVisualization('visualization-container', {
+            width: 1200,
+            height: 650,
+            showChakras: true,
+            showSephirot: true,
+            showCorrespondences: true,
+            interactive: true,
+            animate: true
+        });
+
+        // Event handlers for clicks
+        viz.onChakraClick = (chakraId) => {
+            showInfo('chakra', chakraId, chakraData[chakraId]);
+        };
+
+        viz.onSephirotClick = (sephiraId) => {
+            showInfo('sephira', sephiraId, sephiraData[sephiraId]);
+        };
+
+        // Initialize
+        viz.init();
+
+        // Show info panel function
+        function showInfo(type, id, data) {
+            const panel = document.getElementById('info-panel');
+            const title = document.getElementById('info-title');
+            const content = document.getElementById('info-content');
+
+            panel.style.display = 'block';
+            panel.classList.remove('hidden');
+
+            let html = '';
+
+            if (type === 'chakra') {
+                title.textContent = data.name;
+                html += `<p class="sanskrit">${data.sanskrit}</p>`;
+                html += `<p><strong>Translation:</strong> ${data.translation}</p>`;
+                html += `<p><strong>Location:</strong> ${data.location}</p>`;
+                html += `<p><strong>Element:</strong> ${data.element}</p>`;
+                html += `<p><strong>Color:</strong> ${data.color}</p>`;
+                html += `<div class="associations">`;
+                html += `<h4>Associations</h4>`;
+                html += `<div class="association-item"><span class="label">Meaning:</span><span class="value">${data.associations.meaning}</span></div>`;
+                html += `<div class="association-item"><span class="label">Psychological:</span><span class="value">${data.associations.psychological}</span></div>`;
+                html += `</div>`;
+            } else {
+                title.textContent = data.name;
+                html += `<p class="hebrew">${data.hebrew}</p>`;
+                html += `<p><strong>Translation:</strong> ${data.translation}</p>`;
+                html += `<p><strong>Meaning:</strong> ${data.meaning}</p>`;
+                html += `<p><strong>Psychological:</strong> ${data.psychological}</p>`;
+            }
+
+            content.innerHTML = html;
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const panel = document.getElementById('info-panel');
+                panel.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
