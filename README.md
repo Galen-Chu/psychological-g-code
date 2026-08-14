@@ -2,9 +2,13 @@
 
 A correspondence system and reference resource integrating the **Chakra system** (7 energy centers from Hindu/Buddhist traditions) with the **Kabbalah Tree of Life** (10 Sephirot from Jewish mysticism/Western Esotericism).
 
+---
+
 ## 📋 Project Overview
 
 This project provides structured data on both systems, their traditional correspondences, and serves as a foundation for psychological and spiritual exploration. It combines Eastern and Western mystical frameworks into a unified reference system.
+
+---
 
 ## 🗂️ Data Structure
 
@@ -33,6 +37,8 @@ psychological-g-code/
 │   └── validate-data.js       # npm run validate — checks data files against the schema
 └── README.md
 ```
+
+---
 
 ## 📦 What's Included
 
@@ -74,6 +80,8 @@ psychological-g-code/
 - Responsive design
 - Works standalone or with frameworks
 
+---
+
 ## 🎯 Purpose
 
 This data is designed for:
@@ -85,18 +93,22 @@ This data is designed for:
 5. **Spiritual Practice** - Correspondence-aware meditation and energy work
 6. **Personal Exploration** - Documenting custom correspondences and insights
 
-## 📖 Usage
+---
 
 ### 📚 As a Reference
 - Read the Markdown documentation in `/docs`
 - Explore the JSON data files directly
 - Validate the data files against the schema: `npm install && npm run validate`
 
+---
+
 ### 🎨 Interactive Visualization
 Open `src/visualization/example.html` in a browser to explore the interactive diagram with:
 - Clickable chakras and sephirot
 - Information panels on hover
 - Side-by-side system comparison
+
+---
 
 ### 🧠 Assessment System
 1. Load `data/assessment-questions.json`
@@ -105,6 +117,8 @@ Open `src/visualization/example.html` in a browser to explore the interactive di
 4. Receive practice recommendations
 
 See `docs/assessment-guide.md` for complete instructions.
+
+---
 
 ### 💻 As a Library
 ```javascript
@@ -129,6 +143,8 @@ const viz = new ChakraKabbalahVisualization('container', {
 viz.init();
 ```
 
+---
+
 ## 🔮 Future Development
 
 - [ ] Web application with full assessment integration
@@ -139,6 +155,8 @@ viz.init();
 - [ ] Advanced visualizations (3D, animated flows)
 - [ ] API for integration with other tools
 
+---
+
 ## 🤝 Contributing
 
 This project is open to additions and refinements of:
@@ -147,6 +165,8 @@ This project is open to additions and refinements of:
 - Psychological applications
 - Cross-cultural research
 - Personal insights with clear attribution
+
+---
 
 ## ⚠️ Disclaimer
 
@@ -158,10 +178,55 @@ When working with these systems, please:
 - Avoid treating these as rigid dogmas
 - Use as tools for insight, not absolute truths
 
-## 📄 License
+---
 
-MIT License - Free to use, modify, and distribute
+## 📝 License
 
-## 🙏 Credits
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Data compiled from various sources in Western Esotericism, Theosophy, and comparative religion.
+---
+
+## 👤 Author
+
+**Galen Chu**
+
+- GitHub: [@Galen-Chu](https://github.com/Galen-Chu)
+- LinkedIn: [Galen Chu](https://www.linkedin.com/in/galen-chu-203590b5/)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Google Gemini** - AI-powered content generation
+- **Django & DRF** - Robust web framework
+- **The Open Source Community** - For all the amazing tools and libraries
+
+---
+
+## 📞 Contact & Support
+
+- 📧 Email: (coming soon)
+- 💬 Discord: (coming soon)
+- 🐛 Issues: [GitHub Issues](https://github.com/Galen-Chu/spiritual-g-code/issues)
+
+---
+
+## 🌟 Star History
+
+If you find this project interesting, please consider giving it a ⭐ star!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Galen-Chu/spiritual-g-code&type=Date)](https://star-history.com/#Galen-Chu/spiritual-g-code&Date)
+
+---
+
+<div align="center">
+
+**🔮 Welcome to the source code.**
+
+**Welcome to G-Code.**
+
+**Welcome home, Galen.**
+
+Made with ⚡ by Galen Chu
+
+</div>
