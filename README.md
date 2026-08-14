@@ -29,6 +29,8 @@ psychological-g-code/
 │       └── example.html       # Standalone demo
 ├── schema/
 │   └── data-schema.json       # JSON schema for validation
+├── scripts/
+│   └── validate-data.js       # npm run validate — checks data files against the schema
 └── README.md
 ```
 
@@ -88,7 +90,7 @@ This data is designed for:
 ### As a Reference
 - Read the Markdown documentation in `/docs`
 - Explore the JSON data files directly
-- Use the data schema for validation
+- Validate the data files against the schema: `npm install && npm run validate`
 
 ### Interactive Visualization
 Open `src/visualization/example.html` in a browser to explore the interactive diagram with:

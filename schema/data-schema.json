@@ -69,8 +69,8 @@
           "items": {
             "type": "object",
             "properties": {
-              "chakra_id": { "type": "string" },
-              "sephira_id": { "type": "string" },
+              "chakra_id": { "anyOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" }, "minItems": 1 }] },
+              "sephira_id": { "anyOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" }, "minItems": 1 }] },
               "confidence": {
                 "type": "string",
                 "enum": ["strong", "moderate", "weak", "none"]
