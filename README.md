@@ -2,11 +2,11 @@
 
 A correspondence system and reference resource integrating the **Chakra system** (7 energy centers from Hindu/Buddhist traditions) with the **Kabbalah Tree of Life** (10 Sephirot from Jewish mysticism/Western Esotericism).
 
-## Project Overview
+## 📋 Project Overview
 
 This project provides structured data on both systems, their traditional correspondences, and serves as a foundation for psychological and spiritual exploration. It combines Eastern and Western mystical frameworks into a unified reference system.
 
-## Data Structure
+## 🗂️ Data Structure
 
 ```
 psychological-g-code/
@@ -34,16 +34,16 @@ psychological-g-code/
 └── README.md
 ```
 
-## What's Included
+## 📦 What's Included
 
-### Chakra Data (`data/chakras.json`)
+### 🌀 Chakra Data (`data/chakras.json`)
 - All 7 main chakras (Muladhara through Sahasrara)
 - Sanskrit names, translations, locations
 - Elements, colors, seed syllables
 - Physical, emotional, and mental associations
 - Balance and imbalance indicators
 
-### Sephirot Data (`data/sephirot.json`)
+### ✡️ Sephirot Data (`data/sephirot.json`)
 - All 10 sephirot (Keter through Malkuth)
 - Hebrew names, translations, positions
 - Pillars (Mercy, Severity, Balance)
@@ -51,21 +51,21 @@ psychological-g-code/
 - Psychological associations
 - 22 connecting paths with Hebrew letters
 
-### Correspondence Mappings (`data/correspondences.json`)
+### 🔗 Correspondence Mappings (`data/correspondences.json`)
 - Traditional Theosophical/Golden Dawn correspondences
 - Alice Bailey/Arcane School mappings
 - Alternative and expanded systems
 - Synthetic integrations (Middle Pillar, polarities)
 - Psychological integration models
 
-### Assessment System (`data/assessment-questions.json`, `src/assessment-engine.js`)
+### 🧠 Assessment System (`data/assessment-questions.json`, `src/assessment-engine.js`)
 - 56 self-reflection questions (8 per level)
 - Scoring algorithms for balance assessment
 - Pillar dominance detection
 - Personalized practice recommendations
 - Category-level analysis
 
-### Interactive Visualization (`src/visualization/`)
+### 🎨 Interactive Visualization (`src/visualization/`)
 - SVG-based interactive diagrams
 - Chakra system visualization
 - Tree of Life diagram
@@ -74,7 +74,7 @@ psychological-g-code/
 - Responsive design
 - Works standalone or with frameworks
 
-## Purpose
+## 🎯 Purpose
 
 This data is designed for:
 
@@ -85,20 +85,20 @@ This data is designed for:
 5. **Spiritual Practice** - Correspondence-aware meditation and energy work
 6. **Personal Exploration** - Documenting custom correspondences and insights
 
-## Usage
+## 📖 Usage
 
-### As a Reference
+### 📚 As a Reference
 - Read the Markdown documentation in `/docs`
 - Explore the JSON data files directly
 - Validate the data files against the schema: `npm install && npm run validate`
 
-### Interactive Visualization
+### 🎨 Interactive Visualization
 Open `src/visualization/example.html` in a browser to explore the interactive diagram with:
 - Clickable chakras and sephirot
 - Information panels on hover
 - Side-by-side system comparison
 
-### Assessment System
+### 🧠 Assessment System
 1. Load `data/assessment-questions.json`
 2. Use `src/assessment-engine.js` for scoring
 3. Generate personalized reports
@@ -106,7 +106,7 @@ Open `src/visualization/example.html` in a browser to explore the interactive di
 
 See `docs/assessment-guide.md` for complete instructions.
 
-### As a Library
+### 💻 As a Library
 ```javascript
 // Assessment Engine
 import AssessmentEngine from './src/assessment-engine.js';
@@ -129,7 +129,7 @@ const viz = new ChakraKabbalahVisualization('container', {
 viz.init();
 ```
 
-## Future Development
+## 🔮 Future Development
 
 - [ ] Web application with full assessment integration
 - [ ] Save and track assessment results over time
@@ -139,7 +139,7 @@ viz.init();
 - [ ] Advanced visualizations (3D, animated flows)
 - [ ] API for integration with other tools
 
-## Contributing
+## 🤝 Contributing
 
 This project is open to additions and refinements of:
 - Traditional correspondences with citations
@@ -148,7 +148,7 @@ This project is open to additions and refinements of:
 - Cross-cultural research
 - Personal insights with clear attribution
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 These correspondences are syncretic and synthetic, not traditional to either original system. They emerge from Western Esoteric traditions (Theosophy, Hermetic Qabalah) that sought to integrate Eastern and Western mystical frameworks.
 
@@ -158,10 +158,10 @@ When working with these systems, please:
 - Avoid treating these as rigid dogmas
 - Use as tools for insight, not absolute truths
 
-## License
+## 📄 License
 
 MIT License - Free to use, modify, and distribute
 
-## Credits
+## 🙏 Credits
 
 Data compiled from various sources in Western Esotericism, Theosophy, and comparative religion.
