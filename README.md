@@ -1,4 +1,4 @@
-# Psychological G-Code
+# 🕉️ Psychological G-Code
 
 A correspondence system and reference resource integrating the **Chakra system** (7 energy centers from Hindu/Buddhist traditions) with the **Kabbalah Tree of Life** (10 Sephirot from Jewish mysticism/Western Esotericism).
 
