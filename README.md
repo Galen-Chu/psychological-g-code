@@ -218,7 +218,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌟 Star History
 
 If you find this project interesting, please consider giving it a ⭐ star!
-
 [![Star History Chart](https://api.star-history.com/svg?repos=Galen-Chu/spiritual-g-code&type=Date)](https://star-history.com/#Galen-Chu/spiritual-g-code&Date)
 
 ---
