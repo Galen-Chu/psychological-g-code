@@ -1,6 +1,20 @@
 # Psychological G-Code - Changelog
 
-## [0.1.0] - 2025-01-26
+## [0.1.1] - 2026-11-27
+
+### Fixed
+- **AssessmentEngine.calculateLevelScore 無限遞迴**——與 assessBalance 互相呼叫，
+  任何計分呼叫都會 stack overflow（v0.1.0 起即存在；建立測試套件後才被抓到）。
+  assessBalance 改為直接以原始作答計算，不再繞回 calculateLevelScore
+- calculateAllScores 每級結果補上 `level` 數字——先前 getPracticesForLevel
+  永遠查不到對應建議清單，建議全部掉進通用 fallback
+- README 徽章誤植 Python/Django（本專案是純 Node.js）；CHANGELOG 年份 2025→2026
+
+### Added
+- node:test 測試套件（10 案例：反向計分、閾值邊界、類別分解、支柱支配、報告端到端）
+- GitHub Actions CI：schema 驗證＋JS 語法檢查＋測試
+
+## [0.1.0] - 2026-01-26
 
 ### Initial Release
 

@@ -2,8 +2,9 @@
 
 > A correspondence system and reference resource integrating the **Chakra system** (7 energy centers from Hindu/Buddhist traditions) with the **Kabbalah Tree of Life** (10 Sephirot from Jewish mysticism/Western Esotericism).
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Django](https://img.shields.io/badge/Django-5.0-green.svg)](https://www.djangoproject.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org/)
+[![Data Validation](https://img.shields.io/badge/schema-ajv%20validated-blue.svg)](schema/data-schema.json)
+[![Tests](https://img.shields.io/badge/tests-node:test-green.svg)](.github/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---

@@ -57,14 +57,20 @@ class AssessmentEngine {
   }
 
   /**
-   * Assess if the level shows deficiency, excess, or balance
+   * Assess if the level shows deficiency, excess, or balance.
+   * 直接以原始作答計算百分比——不可呼叫 calculateLevelScore（會無限遞迴）.
    */
   assessBalance(questions, responses) {
-    // This would analyze the pattern of responses
-    // For now, return based on overall score
-    const score = this.calculateLevelScore(questions, responses);
-    if (score.percentage < 40) return 'deficient';
-    if (score.percentage > 85) return 'excessive';
+    const total = questions.reduce((sum, q) => {
+      const response = responses[q.id];
+      if (response !== undefined && response !== null) {
+        return sum + (q.reverse_scoring ? (6 - response) : response);
+      }
+      return sum;
+    }, 0);
+    const percentage = (total / (questions.length * 5)) * 100;
+    if (percentage < 40) return 'deficient';
+    if (percentage > 85) return 'excessive';
     return 'balanced';
   }
 
@@ -76,6 +82,7 @@ class AssessmentEngine {
 
     assessmentData.levels.forEach(level => {
       results[level.level] = {
+        level: level.level,   // getPracticesForLevel 靠這個查建議清單
         name: level.name,
         chakra_id: level.chakra_id,
         sephira_id: level.sephira_id,
