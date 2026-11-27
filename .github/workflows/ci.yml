@@ -20,7 +20,7 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm ci
+      run: npm install   # 本 repo 不提交 package-lock.json，npm ci 不可用
 
     - name: Validate data against schema
       run: npm run validate
