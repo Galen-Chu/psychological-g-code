@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Psychological G-Code · Assessment</title>
+<style>
+  :root { --ink: #1a1917; --muted: #77736b; --brand: #167839; --line: #dedcd7; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Microsoft JhengHei", sans-serif;
+         color: var(--ink); background: #f7f7f5; line-height: 1.55; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 22px; margin: 8px 0 4px; }
+  h2 { font-size: 17px; margin: 28px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .hint { color: var(--muted); font-size: 13px; }
+  .level-desc { font-size: 13px; color: var(--muted); margin: 4px 0 12px; }
+  .q { margin: 14px 0 4px; font-size: 14px; }
+  .scale { display: flex; gap: 6px; flex-wrap: wrap; }
+  .scale label { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px;
+                 cursor: pointer; font-size: 13px; background: #fff; }
+  .scale input { margin-right: 6px; }
+  .scale label:has(input:checked) { border-color: var(--brand); background: #eef8f0; }
+  .pillar textarea { width: 100%; min-height: 40px; border: 1px solid var(--line);
+                     border-radius: 6px; padding: 6px; font: inherit; }
+  button.primary { background: var(--brand); color: #fff; border: 0; border-radius: 8px;
+                   padding: 10px 28px; font: inherit; font-weight: 600; cursor: pointer; margin-top: 24px; }
+  #report { margin-top: 32px; border-top: 2px solid var(--brand); padding-top: 16px; display: none; }
+  .stat { display: inline-block; border: 1px solid var(--line); border-radius: 8px;
+          padding: 8px 14px; margin: 4px 8px 4px 0; background: #fff; }
+  .stat b { font-size: 17px; }
+  .bar { background: #eeedea; border-radius: 999px; height: 10px; overflow: hidden; margin: 4px 0 12px; }
+  .bar > div { height: 100%; background: var(--brand); }
+  ul.rec { padding-left: 18px; }
+  #error { color: #c8423b; font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🕉️ Psychological G-Code</h1>
+  <p class="hint">Chakra × Kabbalah self-reflection assessment · EN + 繁體中文
+    · scoring runs entirely through the registered engine</p>
+
+  <div id="form"></div>
+
+  <h2>支柱評估 · Pillar balance（選填）</h2>
+  <p class="hint">Mercy 擴張 / Severity 結構 / Balance 整合 — 每欄填 1-5 的自評，逗號或換行分隔</p>
+  <div class="pillar">
+    Mercy: <textarea id="p-mercy" placeholder="3, 4, 2"></textarea>
+    Severity: <textarea id="p-severity" placeholder="2, 3"></textarea>
+    Balance: <textarea id="p-balance" placeholder="3"></textarea>
+  </div>
+
+  <button class="primary" id="submit">評估 · Assess</button>
+  <span id="error" class="hint"></span>
+
+  <section id="report"></section>
+</main>
+<script>
+const SCALE = [1, 2, 3, 4, 5];
+let QUESTIONS = null;
+
+function el(tag, attrs = {}, ...children) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "text") node.textContent = v;
+    else node.setAttribute(k, v);
+  }
+  for (const child of children) node.append(child);
+  return node;
+}
+
+async function load() {
+  QUESTIONS = await (await fetch("/api/questions")).json();
+  const form = document.getElementById("form");
+  for (const level of QUESTIONS.levels) {
+    form.append(el("h2", { text: `${level.name} · Level ${level.level}` }));
+    form.append(el("p", { class: "level-desc",
+      text: `chakra: ${level.chakra_id} · sephira: ${level.sephira_id}` }));
+    for (const q of level.questions) {
+      const wrap = el("div", { class: "q" });
+      wrap.append(el("div", { text: q.question + (q.reverse_scoring ? " ↺" : "") }));
+      const scale = el("div", { class: "scale" });
+      for (const value of SCALE) {
+        const label = el("label");
+        const radio = el("input", { type: "radio", name: q.id, value: String(value) });
+        label.append(radio, el("span", { text: String(value) }));
+        scale.append(label);
+      }
+      wrap.append(scale);
+      form.append(wrap);
+    }
+  }
+}
+
+function collect() {
+  const responses = {};
+  for (const level of QUESTIONS.levels) {
+    for (const q of level.questions) {
+      const checked = document.querySelector(`input[name="${q.id}"]:checked`);
+      if (checked) responses[q.id] = Number(checked.value);
+    }
+  }
+  const parsePillar = (id) => {
+    const raw = document.getElementById(id).value.split(/[\s,]+/).filter(Boolean).map(Number);
+    return raw.every((n) => n >= 1 && n <= 5) ? raw : [];
+  };
+  const pillar = {
+    mercy: parsePillar("p-mercy"),
+    severity: parsePillar("p-severity"),
+    balance: parsePillar("p-balance"),
+  };
+  return { responses, pillar };
+}
+
+function render(report) {
+  const box = document.getElementById("report");
+  box.style.display = "block";
+  box.replaceChildren();
+  box.append(el("h2", { text: "評估報告 · Assessment Report" }));
+  box.append(el("div", { class: "stat",
+    text: `Overall balance: ${report.overallBalance.toFixed(1)}%` }));
+  box.append(el("div", { class: "stat", text: report.overallInterpretation }));
+  box.append(el("div", { class: "stat", text: report.pillar.interpretation.title }));
+  for (const [key, level] of Object.entries(report.levels)) {
+    box.append(el("h2", { text: `${level.name} — ${level.score.percentage.toFixed(0)}% (${level.score.interpretation})` }));
+    const bar = el("div", { class: "bar" });
+    const fill = el("div");
+    fill.style.width = `${Math.min(level.score.percentage, 100)}%`;
+    bar.append(fill);
+    box.append(bar);
+    for (const [cat, data] of Object.entries(level.categoryBreakdown)) {
+      box.append(el("div", { class: "hint",
+        text: `${cat}: ${data.average?.toFixed(1) ?? "—"} / 5 (${data.count ?? 0} answered)` }));
+    }
+  }
+  box.append(el("h2", { text: "建議 · Recommendations" }));
+  const list = el("ul", { class: "rec" });
+  for (const rec of report.recommendations) {
+    list.append(el("li", { text: rec.message }));
+    const practices = el("ul");
+    for (const practice of rec.practices ?? []) practices.append(el("li", { text: practice }));
+    list.append(practices);
+  }
+  box.append(list);
+  box.append(el("p", { text: report.summary }));
+  const save = el("button", { class: "primary", text: "儲存這份報告 · Save" });
+  save.onclick = async () => {
+    const res = await fetch("/api/results", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(report),
+    });
+    const out = await res.json();
+    save.textContent = `✓ saved (${out.total} total)`;
+  };
+  box.append(save);
+}
+
+document.getElementById("submit").onclick = async () => {
+  document.getElementById("error").textContent = "";
+  try {
+    const payload = collect();
+    const res = await fetch("/api/assess", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error((await res.json()).error);
+    render(await res.json());
+  } catch (error) {
+    document.getElementById("error").textContent = String(error.message || error);
+  }
+};
+
+load();
+</script>
+</body>
+</html>

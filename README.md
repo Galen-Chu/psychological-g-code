@@ -36,6 +36,12 @@ psychological-g-code/
 │       ├── interactive-diagram.js
 │       ├── interactive-diagram.css
 │       └── example.html       # Standalone demo
+├── server.js                  # Web app: assessment UI + scoring API + results store (Node stdlib)
+├── public/
+│   └── index.html             # The assessment page (bilingual, Likert, report view)
+├── tests/
+│   ├── assessment-engine.test.js  # 10 engine cases (node:test)
+│   └── web.test.js                # 5 server cases (real HTTP, ephemeral port)
 ├── schema/
 │   └── data-schema.json       # JSON schema for validation
 ├── scripts/
@@ -44,6 +50,16 @@ psychological-g-code/
 ```
 
 ---
+
+## 🌐 Web App · 網頁版評估
+
+```bash
+npm start                # → http://127.0.0.1:8787（PORT 環境變數可覆寫）
+```
+
+七層 56 題的完整評估（反向題自動處理）、支柱自評、即時報告（整體平衡、
+逐層百分比、類別分解、建議與實踐清單），報告可一鍵保存、隨時間追蹤
+（`data/results.json`，append-only）。零相依——Node stdlib `http`。
 
 ## 📦 What's Included
 
@@ -152,8 +168,8 @@ viz.init();
 
 ## 🔮 Future Development
 
-- [ ] Web application with full assessment integration
-- [ ] Save and track assessment results over time
+- [x] Web application with full assessment integration（v0.2.0——`npm start`）
+- [x] Save and track assessment results over time（v0.2.0——results store，append-only JSON）
 - [ ] Mobile apps for on-the-go assessment
 - [ ] Meditation timer with chakra/sephira focus
 - [ ] Community correspondence database

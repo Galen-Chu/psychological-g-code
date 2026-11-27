@@ -1,10 +1,11 @@
 {
   "name": "psychological-g-code",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Chakra-Kabbalah correspondence system and reference resource",
   "main": "src/assessment-engine.js",
   "scripts": {
-    "test": "node --test tests/assessment-engine.test.js",
+    "start": "node server.js",
+    "test": "node --test tests/assessment-engine.test.js tests/web.test.js",
     "validate": "node scripts/validate-data.js",
     "build-viz": "echo \"Visualization builds directly in browser\"",
     "serve": "npx http-server . -p 8080 -o src/visualization/example.html"
